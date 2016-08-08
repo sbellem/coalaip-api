@@ -29,15 +29,9 @@ services:
       - "58000:8000"
     links:
       - postgres
-
       - mailhog
-
-
-
-
 
   mailhog:
     image: mailhog/mailhog
     ports:
       - "8025:8025"
-
