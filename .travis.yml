@@ -1,0 +1,12 @@
+language: python
+python: '3.5'
+cache: pip
+
+services:
+  - postgresql
+
+install: pip install -r requirements/test.txt codecov
+
+script: py.test -v --cov --ds=config.settings.test
+
+after_success: codecov
