@@ -15,7 +15,6 @@ coalaipapi
 
 REST API for COALA IP
 
-LICENSE: Apache Software License 2.0
 
 Development with Docker
 -----------------------
@@ -157,3 +156,7 @@ See detailed `cookiecutter-django Docker documentation`_.
 .. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
 
 
+LICENSE
+-------
+
+Apache Software License 2.0
