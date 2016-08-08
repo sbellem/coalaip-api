@@ -1,5 +1,5 @@
 coalaipapi
-==============================
+==========
 
 REST API for COALA IP
 
@@ -13,9 +13,28 @@ REST API for COALA IP
 
 LICENSE: Apache Software License 2.0
 
+Development with Docker
+-----------------------
+You'll need docker and docker-compose.
+
+.. code-block:: bash
+       
+    $ docker-compose -f dev.yml build
+    $ sudo docker-compose -f dev.yml up -d
+    $ docker-compose -f dev.yml run django python manage.py makemigrations
+    $ docker-compose -f dev.yml run django python manage.py migrate
+    $ docker-compose -f dev.yml run django python manage.py createsuperuser
+
+
+You should now be able to access the app via a browser at ``localhost:58000``.
+
+If you are using docker-machine (e.g.: on OS X), replace ``localhost`` with
+the ip of the vm (you can get it via the command
+``docker-machine ip machine-name``).
+
 
 Settings
-------------
+--------
 
 Moved to settings_.
 
