@@ -5,6 +5,9 @@
 .. image:: https://img.shields.io/travis/bigchaindb/coalaip-api.svg
     :target: https://travis-ci.org/bigchaindb/coalaip-api
 
+.. image:: https://img.shields.io/codecov/c/github/bigchaindb/coalaip-api/master.svg
+    :target: https://codecov.io/github/bigchaindb/coalaip-api?branch=master
+
 .. image:: https://readthedocs.org/projects/coalaip-api/badge/?version=latest
     :target: https://coalaip-api.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
