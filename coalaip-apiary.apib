@@ -1,0 +1,40 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# coalaip api
+
+## Works Collection [/works]
+
+### List All Works [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Lord of the Rings",
+            }
+        ]
+
+### Create a New Work [POST]
+
+You may create your own work using this action. It takes a JSON
+object containing a work.
+
++ Request (application/json)
+
+        {
+            "name": "Lord of the Rings",
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /works/2
+
+    + Body
+
+            {
+                "name": "Lord of the Rings",
+                "TXID": "1234567890"
+            }
