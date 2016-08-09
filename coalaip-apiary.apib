@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: https://coala.ip/
 
 # coalaip api
 
@@ -11,7 +11,7 @@ HOST: http://polls.apiblueprint.org/
 
         [
             {
-                "name": "Lord of the Rings",
+                "name": "Lord of the Rings"
             }
         ]
 
@@ -23,7 +23,7 @@ object containing a work.
 + Request (application/json)
 
         {
-            "name": "Lord of the Rings",
+            "name": "Lord of the Rings"
         }
 
 + Response 201 (application/json)
@@ -36,5 +36,160 @@ object containing a work.
 
             {
                 "name": "Lord of the Rings",
-                "TXID": "1234567890"
+                "txid": "1234567890"
+            }
+            
+
+## Manifestations Collection [/manifestations]
+            
+### List All Manifestations [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Lord of the Rings"
+            }
+        ]
+
+### Create a New Manifestation [POST]
+
+You may create your own manifestation using this action. It takes a JSON
+object containing a manifestation.
+
++ Request (application/json)
+
+        {
+            "name": "Lord of the Rings"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /manifestations/2
+
+    + Body
+
+            {
+                "name": "Lord of the Rings",
+                "txid": "1234567890"
+            }
+
+
+## Rights Collection [/rights]
+
+### List All Rights [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Lord of the Rings"
+            }
+        ]
+
+### Create a New Right [POST]
+
+You may create your own right using this action. It takes a JSON
+object containing a right.
+
++ Request (application/json)
+
+        {
+            "creation": "https://coala.ip/creations/123",
+            "usageType": ["copy", "play"]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /rights/123
+
+    + Body
+
+            {
+                "creation": "https://coala.ip/creations/123",
+                "usageType": ["copy", "play"],
+                "url": ""https://coala.ip/rights/123"";
+            }
+
+
+
+## RightsAssignments Collection [/rightsassignments]
+
+### List All RightsAssignments [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Lord of the Rings"
+            }
+        ]
+
+### Create a New RightsAssignments [POST]
+
+You may create your own `RightsAssignments` using this action. It takes a JSON
+object containing a `RightsAssignments`.
+
++ Request (application/json)
+
+        {
+            "next_owner": "https://coala.ip/users/123",
+            "right": "https://coala.ip/rights/123",
+            "contract": "https://coala.ip/contracts/123"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /rightsassignments/2
+
+    + Body
+
+            {
+                "name": "Lord of the Rings",
+                "txid": "1234567890"
+            }
+            
+
+## Users Collection [/users]
+
+### List All Users [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Alice"
+            }
+        ]
+
+### Create a New User [POST]
+
+You may create your own `User` using this action. It takes a JSON
+object containing a `username` and `email`.
+
++ Request (application/json)
+
+        {
+            "username": "coala",
+            "email": "coala@jungle.io",
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/123
+
+    + Body
+
+            {
+                "username": "coala",
+                "email": "coala@jungle.io",
+                "url": "htpps://coala.ip/users/123" 
             }
