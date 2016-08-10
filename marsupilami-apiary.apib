@@ -1,0 +1,41 @@
+FORMAT: 1A
+HOST: https://marsupilami.io/
+
+# marsupilami
+
+High level api for Coala IP.
+
+## Transfers Collection [/transfers]
+
+### List All Transfers [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "": ,
+            }
+        ]
+
+### Create a New Transfer [POST]
+
+You may create your own transfer using this action. It takes a JSON
+object containing a `Creation` url.
+
++ Request (application/json)
+
+        {
+            "creation": "https://marsupilami.io/creations/123
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /transfers/123
+
+    + Body
+
+            {
+                "url": "https://marsupilami.io/transfers/123",
+            }
