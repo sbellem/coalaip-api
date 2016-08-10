@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
 
     url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

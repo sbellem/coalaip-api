@@ -46,6 +46,5 @@ djangorestframework==3.4.3
 markdown==2.6.6
 django-filter==0.13.0
 
-
-
-# Your custom requirements go here
+# oauth2 support
+django-oauth-toolkit==0.10.0
